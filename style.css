@@ -1,0 +1,14 @@
+body{
+  background-color: whitesmoke;
+  color:#333;
+}
+header{
+  display:grid;
+  grid-template-columns: 10fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img{
+  width: 100%;
+}
