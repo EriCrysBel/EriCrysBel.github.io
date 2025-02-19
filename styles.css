@@ -134,7 +134,7 @@ button:hover {
 }
 #contacto{
   position: relative;
-  background: url('form-contact.png') no-repeat center center/cover;
+  background: url('images/form-contact.png') no-repeat center center/cover;
   height: 70vh;
   display: flex;
   flex-direction: column;
