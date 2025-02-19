@@ -1,43 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Web de Erika Bello Vargas</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Este sitio recoge los trabajos más significativos de Erika Crystal Bello de Ruiz como diseñadora y desarrollador web">
-  <meta name="keywords" content="Desarrollador web, diseño web, html5, css, mysql, json, markdown, git, xml, api fetch, dom">
-  <!-- og:title sirve para compartir nuestra pagina en redes sociales y administrar como se comparten -->
-  <meta property="og:title" content="Portfolio del Web Master Erika Bello de Ruiz" />
-  <meta property="og:description" content=content="Este sitio recoge los trabajos más significativos de Erika Crystal Bello de Ruiz como diseñadora y desarrollador web"/>
-  <meta property="og:image" content="https://EriCrysBel.github.io/avatar.jpeg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladora Web & Marketing Digital</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-  <h1>Futuro Portfolio Erika Crystal Bello de Ruiz</h1>
-    <figure>
-      <img src="avatar.jpeg" alt="avatarin" style="width: 300px;">
-    </figure>
-    <section itemscope itemtype="http://schema.org/Person">
-      Hola, mi nombre es
-      <span itemprop="name">Erika</span>,
-      soy una
-      <span itemprop="jobTitle">Desarrollador web Junior</span>
-      
-      <span itemprop="affiliation">en Patrimonio Nacional Aranjuez</span>.
-      Mis amigos me llaman Eri
-      <span itemprop="additionalName">Unicorn</span>.
-      Puedes visitar mi página
-      <a href="https://github.com/EriCrysBel" itemprop="url">https://github.com/EriCrysBel</a>.
-      <section itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        Vivo
-        <span itemprop="streetAddress">1234 Peach Drive</span>,
-        <span itemprop="addressLocality">Madrid</span>,
-        <span itemprop="addressRegion">Madrid</span>.
-      </section>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="profile.html">Mi Perfil</a></li>
+            </ul>
+        </nav>
+        <h1>Desarrolladora Web & Marketing Digital</h1>
+    </header>
+    
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="servicios-container">
+            <div class="servicio">
+                <img src="desarrollo-web.png" alt="Desarrollo Web">
+                <h3>Desarrollo Web</h3>
+                <p>Creación de sitios web atractivos y funcionales.</p>
+                <button onclick="window.location.href='desarrolloWeb.html'">Más info</button>
+            </div>
+            <div class="servicio">
+                <img src="marketing-digital.png" alt="Marketing Digital">
+                <h3>Marketing Digital</h3>
+                <p>Estrategias efectivas para hacer crecer tu negocio.</p>
+                <button onclick="mostrarMensaje('Marketing Digital')">Más info</button>
+            </div>
+        </div>
     </section>
-
-  </header>
+    
+    <section id="sobre-mi" class="sobre-mi-container">
+        <div class="sobre-mi-img">
+            <img src="fotoperfil.jpg" alt="Foto de perfil" class="profile-img">
+        </div>
+        <div class="sobre-mi-texto">
+            <h2>Sobre Mí</h2>
+            <p>Soy una apasionada por la tecnología y el marketing, lista para ayudarte a impulsar tu presencia digital.</p>
+            <h3>Mis Proyectos:</h3>
+            <ul>
+                <li><a href="https://ericrysbel.github.io/minecraftsites/" target="_blank">Minecraft Sites</a></li>
+                <li><a href="https://tandem-app-qr.netlify.app/" target="_blank">Tandem App QR</a></li>
+                <li><a href="https://ericrysbel.github.io/landing-pages/" target="_blank">Landing Pages</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <script>
+        function mostrarMensaje(servicio) {
+            alert('Más información sobre ' + servicio);
+        }
+    </script>
 </body>
 </html>

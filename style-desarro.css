@@ -1,0 +1,120 @@
+/* --------- DESARROLLO WEB (desarrolloWeb.html) --------- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8fc;
+    color: #4b0082;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    position: relative;
+    background: url('bannerfondo.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  nav ul li {
+    display: inline;
+  }
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(67, 41, 44, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  section {
+    margin: 50px 20px;
+  }
+.web-header {
+    position: relative;
+    background: url('servicios.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .web-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .web-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  .web-nav a {
+    background-color: rgba(67, 41, 44, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .web-servicios-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .web-servicio {
+    background-color: #e7f3fc;
+    padding: 20px;
+    border-radius: 10px;
+  
+  }
+  
+  .web-form input, .web-form textarea {
+    width: 50%;
+    border: 1px solid #00824b;
+    border-radius: 5px;
+  }
+  button {
+    background-color: #ffd700;
+    color: #4b0082;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #fdd835;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #4b0082;
+    border-radius: 5px;
+  }
