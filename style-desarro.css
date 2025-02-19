@@ -20,6 +20,8 @@ body {
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: black 2px solid;
+    background-color: rgba(67, 41, 44, 0.244);
+    border-radius: 10px;
   }
   nav {
     position: absolute;
