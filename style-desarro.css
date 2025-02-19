@@ -9,7 +9,6 @@ body {
   }
   .web-header {
     position: relative;
-    background: url('bannerfondo.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -18,7 +17,7 @@ body {
   }
   .web-header h1 {
     font-size: 3em;
-    color: #dfbef7;
+    color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-decoration: black 2px solid;
   }
