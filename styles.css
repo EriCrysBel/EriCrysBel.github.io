@@ -93,7 +93,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
-  border: 10px solid #fdbde1; /* Borde con el color de fondo actual */
+  border-radius: 150px;
   background-color: hsl(328, 100%, 97%);
   padding: 40px;
   width: 100%;
