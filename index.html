@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desarrolladora Web & Marketing Digital</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -13,12 +14,10 @@
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="profile.html">Mi Perfil</a></li>
             </ul>
         </nav>
         <h1>Ericrysbel Digital Services</h1>
     </header>
-    
     <section id="servicios">
         <h2>Servicios</h2>
         <div class="servicios-container">
@@ -53,11 +52,9 @@
         </div>
     </section>
     
-    
-    
     <section id="contacto">
         <h2>Contacto</h2>
-        <form>
+        <form id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             
@@ -71,18 +68,48 @@
         </form>
     </section>
 
-   <footer class="footer">
-    <div class="footer-container">
-        
-        <div class="social-icons">
-            <p>Sígueme en redes sociales:</p>
-            <a href="https://www.instagram.com/eriikacrystal/" target="_blank" class="icon instagram">
-                <img src="/images/instagram.png" alt="Instagram">
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" class="icon tiktok">
-                <img src="/images/tiktok.png" alt="TikTok">
-            </a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <p>Sígueme en redes sociales:</p>
+                <a href="https://www.instagram.com/eriikacrystal/" target="_blank" class="icon instagram">
+                    <img src="/images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="icon tiktok">
+                    <img src="/images/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <p class="copyright">&copy; 2024 Ericrysbel Digital Services. Todos los derechos reservados.</p>
         </div>
-        <p class="copyright">&copy; 2024 Ericrysbel Digital Services. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        (function(){
+            emailjs.init("lig-ZjVkTatVjfObZ"); // Reemplaza con tu User ID de EmailJS
+
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const serviceID = "service_etggut4"; // Reemplaza con tu Service ID de EmailJS
+                const templateID = "template_kvm8e8j"; // Reemplaza con tu Template ID de EmailJS
+
+                const templateParams = {
+                    nombre: document.getElementById("nombre").value,
+                    email: document.getElementById("email").value,
+                    mensaje: document.getElementById("mensaje").value
+                };
+
+                emailjs.send(serviceID, templateID, templateParams)
+                    .then(response => {
+                        alert("Mensaje enviado con éxito!");
+                        document.getElementById("contact-form").reset();
+                    })
+                    .catch(error => {
+                        alert("Error al enviar el mensaje, inténtalo nuevamente.");
+                        console.error(error);
+                    });
+            });
+        })();
+    </script>
+</body>
+</html>

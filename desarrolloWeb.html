@@ -41,21 +41,63 @@
         </div>
     </section>
     
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="email">Correo:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <p>Sígueme en redes sociales:</p>
+                <a href="https://www.instagram.com/eriikacrystal/" target="_blank" class="icon instagram">
+                    <img src="/images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="icon tiktok">
+                    <img src="/images/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            <p class="copyright">&copy; 2024 Ericrysbel Digital Services. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+        <script>
+            (function(){
+                emailjs.init("lig-ZjVkTatVjfObZ"); // Reemplaza con tu User ID de EmailJS
+    
+                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                    event.preventDefault();
+    
+                    const serviceID = "service_etggut4"; // Reemplaza con tu Service ID de EmailJS
+                    const templateID = "template_kvm8e8j"; // Reemplaza con tu Template ID de EmailJS
+    
+                    const templateParams = {
+                        nombre: document.getElementById("nombre").value,
+                        email: document.getElementById("email").value,
+                        mensaje: document.getElementById("mensaje").value
+                    };
+    
+                    emailjs.send(serviceID, templateID, templateParams)
+                        .then(response => {
+                            alert("Mensaje enviado con éxito!");
+                            document.getElementById("contact-form").reset();
+                        })
+                        .catch(error => {
+                            alert("Error al enviar el mensaje, inténtalo nuevamente.");
+                            console.error(error);
+                        });
+                });
+            })();
+        </script>
 </body>
 </html>

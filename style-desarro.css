@@ -136,3 +136,64 @@ body {
     border: 1px solid #4b0082;
     border-radius: 5px;
   }
+  
+.footer {
+  background: linear-gradient(135deg, #B985AF,#AFD7E1, #f1aef8);
+  color: white;
+  padding: 20px 10px;
+  font-size: 1.2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Colores personalizados para cada red social */
+.instagram {
+  background: radial-gradient(circle,);
+}
+
+.tiktok {
+  background: radial-gradient(135deg, #EFCFD2,#B38EB4);
+}
+
+/* Estilo para el texto de copyright */
+.copyright {
+  font-size: 0.9em;
+  margin-top: 20px;
+  opacity: 0.8;
+}
