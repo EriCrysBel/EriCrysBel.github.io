@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de Desarrollo Web</title>
     <link rel="stylesheet" href="style-desarro.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 <body>
     <header class="web-header">
@@ -42,7 +44,10 @@
     </section>
     
     <section id="contacto">
-        <h2>Contacto</h2>
+        <div class="contacto-titulo">
+            <h2>Contacto</h2>   
+        </div>
+        
         <form id="contact-form">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -56,7 +61,7 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
-    
+
     <footer class="footer">
         <div class="footer-container">
             <div class="social-icons">
