@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desarrolladora Web & Marketing Digital</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,11 +32,11 @@
                 <img src="/images/marketing-digital.png" alt="Marketing Digital">
                 <h3>Marketing Digital</h3>
                 <p>Estrategias efectivas para hacer crecer tu negocio.</p>
-                <button onclick="mostrarMensaje('Marketing Digital próximamente')">Más info</button>
+                <button onclick="mostrarMensaje('Marketing Digital próximamente')" class="marketing-btn">Más info</button>
             </div>
         </div>
     </section>
-    
+    <div id="popup-container"></div>
     <section id="sobre-mi" class="sobre-mi-container">
         <div class="sobre-mi-img">
             <img src="/images/foto-perfil.jpg" alt="Foto de perfil" class="profile-img">
@@ -86,7 +87,7 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
     function mostrarMensaje(mensaje) {
         alert(mensaje);
     }
@@ -116,6 +117,6 @@
                     });
             });
         })();
-    </script>
+    </script> -->
 </body>
 </html>

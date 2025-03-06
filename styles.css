@@ -74,10 +74,13 @@ section {
 button {
   background-color: #ffd700;
   color: #4b0082;
-  padding: 10px 20px;
   border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 button:hover {
   background-color: #fdd835;
@@ -165,6 +168,105 @@ padding: 40px;
 .sobre-mi-texto ul li a:hover {
   color: #ffd700;
 }
+
+
+/* Estilos para el botón de Marketing Digital */
+.marketing-btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.marketing-btn:hover {
+  background-color: #e68900;
+}
+
+/* Estilos para el popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup.info {
+  background-color: #3498db; /* Azul informativo */
+}
+
+.popup.error {
+  background-color: #e74c3c; /* Rojo de error */
+}
+
+.popup.success {
+  background-color: #2ecc71; /* Verde de éxito */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -55%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+
+
+#popup-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.popup {
+  padding: 15px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  min-width: 250px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup.success {
+  background-color: #28a745;
+}
+
+.popup.error {
+  background-color: #dc3545;
+}
+
+
 
 #contacto{
   position: relative;
